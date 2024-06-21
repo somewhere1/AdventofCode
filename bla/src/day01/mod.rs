@@ -17,5 +17,5 @@ pub fn day01() {
 fn increasing(num: &[i32], offset: usize) -> usize {
     num.windows(offset + 1)
         .map(|i| (i[0] < i[offset]) as usize)
-        .sum::<usize>()//fold(0, |a, b| a + b)
+        .sum::<usize>() //fold(0, |a, b| a + b)
 }
