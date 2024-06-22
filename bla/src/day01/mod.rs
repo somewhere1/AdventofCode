@@ -1,11 +1,10 @@
-
 use crate::utils::read_file;
 pub fn day01() {
     let file_path: &str = r"D:\Rust_practice\AdventofCode\bla\src\inputs\input.txt";
-    let nums:Vec<i32> = read_file(file_path)
-                            .iter()
-                            .map(|line| line.parse().unwrap())
-                            .collect();
+    let nums: Vec<i32> = read_file(file_path)
+        .iter()
+        .map(|line| line.parse().unwrap())
+        .collect();
 
     println!("Day 01 - Part 1: {}", increasing(&nums, 1));
 
