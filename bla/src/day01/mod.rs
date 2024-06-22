@@ -1,14 +1,11 @@
-use std::{
-    fs::File,
-    io::{BufRead, BufReader},
-};
 
+use crate::utils::read_file;
 pub fn day01() {
     let file_path: &str = r"D:\Rust_practice\AdventofCode\bla\src\inputs\input.txt";
-    let nums: Vec<i32> = BufReader::new(File::open(file_path).expect("Can not file a file"))
-        .lines()
-        .map(|line| line.unwrap().parse().unwrap())
-        .collect();
+    let nums:Vec<i32> = read_file(file_path)
+                            .iter()
+                            .map(|line| line.parse().unwrap())
+                            .collect();
 
     println!("Day 01 - Part 1: {}", increasing(&nums, 1));
 

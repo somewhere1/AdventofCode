@@ -1,10 +1,7 @@
-use std::{fs::File, io::{BufRead, BufReader}};
+use crate::utils::read_file;
 pub fn day02() {
-    let file = File::open(r"D:\Rust_practice\AdventofCode\bla\src\inputs\input.txt").expect("can not file the file");
-    let lines = BufReader::new(file)
-    .lines()
-    .map(|x| x.unwrap())
-    .collect::<Vec<String>>();
+    let file = r"D:\Rust_practice\AdventofCode\bla\src\inputs\input.txt";
+    let lines = read_file(file);
     println!("Day 02 - part 1: ");
     println!("part 01: {}",part1(&lines));
 
